@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Parcial</string>
+    <string name="Entrar">Entrar</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Constraseña">Contraseña</string>
+    <string name="Todo">TODO</string>
+</resources>
