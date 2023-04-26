@@ -1,56 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_calculator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.example.Parcial.MainActivity">
 
-    <ImageView
+    <TextView
+        android:id="@+id/first_number_text_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:layout_margin="20dp"
-        android:src="@mipmap/login"
-        tools:ignore="ImageContrastCheck"
-        android:contentDescription="@string/Todo" />
-        
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="@string/Usuario"
-            android:inputType="textEmailAddress"
-            android:layout_margin="20dp"
-            android:id="@+id/User"
-            android:autofillHints=""
-            tools:ignore="VisualLintTextFieldSize" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="Inserte el primer numero:" />
+
     <EditText
+        android:id="@+id/first_number_edit_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:hint="@string/Constraseña"
-        android:inputType="textPassword"
-        android:layout_margin="20dp"
-        android:id="@+id/Pass"
-        android:autofillHints=""
-        tools:ignore="VisualLintTextFieldSize" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_number_text_view"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/second_number_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_number_edit_text"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="Inserte el segundo numero:" />
+
+    <EditText
+        android:id="@+id/second_number_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_number_text_view"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/operation_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_number_edit_text"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/sum_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sumar" />
+
+        <RadioButton
+            android:id="@+id/subtract_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restar" />
+    </RadioGroup>
 
     <Button
+        android:id="@+id/clear_button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="40dp"
-        android:layout_weight="1"
-        android:background="#223433"
-        android:hint="@string/Entrar"
-        android:textColor="#342522"
-        android:textColorHint="#223433"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        tools:ignore="SpUsage,VisualLintButtonSize" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/operation_radio_group"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="
+ />
 
 
-</LinearLayout>
+
